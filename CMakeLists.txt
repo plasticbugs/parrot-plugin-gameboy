@@ -27,8 +27,8 @@ include(${PARROTCART_SDK}/sdk/cvplugin.cmake)
 
 # The same source makes the same file, whenever it's built: the compiler's
 # __DATE__ and __TIME__ (the build date in the binary info) come from
-# SOURCE_DATE_EPOCH, fixed here at the tested build's day, 2026-11-18.
-set(BUILD_EPOCH 1795003200)
+# SOURCE_DATE_EPOCH, fixed here at the build's day, 2026-11-23.
+set(BUILD_EPOCH 1795435200)
 set(CMAKE_C_COMPILER_LAUNCHER ${CMAKE_COMMAND} -E env SOURCE_DATE_EPOCH=${BUILD_EPOCH})
 set(CMAKE_CXX_COMPILER_LAUNCHER ${CMAKE_COMMAND} -E env SOURCE_DATE_EPOCH=${BUILD_EPOCH})
 
@@ -46,6 +46,6 @@ cvpsram_use(gb)
 cvpad_use(gb)                               # USB game pads: the port is a host
 pico_enable_stdio_usb(gb 0)
 pico_enable_stdio_uart(gb 0)
-cvcart_plugin(gb ID parrotcart.gameboy NAME "Game Boy" VERSION 0.1.3 BY "Parrot Cart"
+cvcart_plugin(gb ID parrotcart.gameboy NAME "Game Boy" VERSION 0.1.5 BY "Parrot Cart"
               HOME /gb OPENS .gb .gbc USES usb-host psram ICON src/gb_icon.txt FILE_ICON src/gb_file_icon.txt
               README CART-README.md)

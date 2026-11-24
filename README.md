@@ -17,7 +17,7 @@ On the ColecoVision controller:
 - Keypad # is Start, and keypad * is Select.
 - Keypad 1 to 5 pick the colors. 1 is pea soup, 2 is gray, 3 is sky and 4 is sunset. 5 is full color, for Game Boy Color games.
 - Hold keypad 7 for a second to save a state, or 9 to load it.
-- Press RESET on the console to go back to the menu.
+- Press RESET on the console to go back to the menu, or hold both fire buttons and \* for 2 seconds (Select and Start on a USB pad).
 
 On a USB pad:
 
